@@ -1,0 +1,10 @@
+### Ambiente de Desenvolvimento ###
+
+Depois do angula.js instado na maquina, é preciso instalar o typescript com o comando:
+    - npm install -g typescript
+
+Instalar a ferramenta angular cli:
+    - npm install -g @angular/cli
+
+Verificar se o angular/cli está instalado:
+    - ng version
