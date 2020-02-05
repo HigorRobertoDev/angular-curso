@@ -1,10 +1,75 @@
+### Npm é um gerenciador de pacotes do node ###
+
 ### Ambiente de Desenvolvimento ###
 
-Depois do angula.js instado na maquina, é preciso instalar o typescript com o comando:
-    - npm install -g typescript
+    Depois do angula.js instado na maquina, é preciso instalar o typescript com o comando:
+        - npm install -g typescript
 
-Instalar a ferramenta angular cli:
-    - npm install -g @angular/cli
+    Instalar a ferramenta angular cli (Auxilia no desenvolvimento de um projeto angular):
+        - npm install -g @angular/cli
+        - npm install -g @angular/cli@latest
 
-Verificar se o angular/cli está instalado:
-    - ng version
+    Verificar se o angular/cli está instalado:
+        - ng version
+
+### Arquitetura Modular do Algular ###
+
+### TypeScript é a linguaguem que o Angular usa para o desenvolvimento ###
+    - Vantagens
+        Linguagem tipada
+        Orientada a oo
+        Criação de classes
+        Facil criação de modelos orientados a oo
+
+### Webpack ###
+    - Gerenciador de modulos
+
+### Arquivo node_modulos nunca deve ser versionado todas as dependências ###
+    - gerado pelo comando npm install
+
+### Comandos para testes ###
+    - ng test
+        Testa a aplicação
+    - ng e2e
+        Teste de integração
+    - ng lint
+        Analisar a qualidade do código
+    - ng build --prod
+        Cria um código na pasta dist otimizado para ir para produção
+
+### Criação de projetos e modulos ###
+
+    Criar um projeto (Montar toda a estrutura padrão do angular e instalar os pagotes e dependencias):
+        - ng new primeiro-projeto
+
+    Subir o projeto
+        - ng serve
+
+    Criar modulo (Ajuda na organização, Vendas, clientes, produtos)
+        ng g m nome-modulo
+
+    Criar um componente (Partes de html):
+        - ng g c modulo/nome-componente
+
+    Criar um serviço (Parte lógica, chamadas de api)
+        - ng g s modulo/service/nome-serviço
+
+### Bootstrap ###
+   Instalando o Bootstrap
+        - npm install --save bootstrap@3
+
+### Tipo de variável no angular ###
+    Variável no escopo local
+        - let nomeVarialvem: number;
+
+### Rotas de Navegação ###
+    No arquivo app-routing.module.ts vai estar as definições de todas as rodas da aplicação
+
+### Buscas em listas ###
+    return tarefas.find(tarefa => tarefa.id === id);
+    tarefas = tarefas.filter(tarefa => tarefa.id !== id);
+
+### Directivas do angular como for, if ###
+    <tr *ngFor="let tarefa of tarefas">
+    <p *ngIf="tarefas.length==0">Nenhuma tarefa cadastrada.</p>
+    <a [routerLink]="['/tarefas/castrar-tarefa']"

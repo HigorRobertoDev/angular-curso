@@ -13,7 +13,7 @@ import { CursosModule } from './cursos/cursos.module';
     AppComponent,
     MeuPrimeiroComponent,
     MeuSegundoComponent,
-    MeuTerceiroComponent
+    MeuTerceiroComponent,
   ],
   imports: [
     BrowserModule,
